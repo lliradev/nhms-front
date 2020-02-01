@@ -1,10 +1,23 @@
 <nav class="yellow">
   <div class="nav-wrapper">
-    <a href="/" class="brand-logo">NHMS</a>
+    <a routerLink="/" class="brand-logo">NHMS</a>
+    <a routerLink="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
-      <li><a href="collapsible.html">JavaScript</a></li>
+      <li><a routerLink="/">Ingresa</a></li>
+      <li>
+        <a routerLink="/">
+          <i class="material-icons">shopping_cart</i>
+        </a>
+      </li>
     </ul>
   </div>
 </nav>
+
+<ul class="sidenav" id="mobile-demo">
+  <li><a class="sidenav-close" routerLink="/">Ingresa</a></li>
+  <li>
+    <a class="sidenav-close" routerLink="/">
+      <i class="material-icons">shopping_cart</i>
+    </a>
+  </li>
+</ul>
