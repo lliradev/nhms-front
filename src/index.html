@@ -13,17 +13,44 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Roboto fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <!-- Swiper CSS 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
 </head>
 
 <body>
   <app-root></app-root>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Swiper js 
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
   <script>
     // App of all system
     document.addEventListener('DOMContentLoaded', function () {
       // Initialization all componetns
       M.AutoInit();
+
+      // Initialize Swiper
+      /*
+      var swiper = new Swiper('.swiper-container', {
+        cssMode: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        mousewheel: true,
+        keyboard: true,
+      }); 
+      */
     });
   </script>
 </body>
