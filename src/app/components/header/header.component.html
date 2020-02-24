@@ -1,39 +1,25 @@
-<nav class="yellow">
-  <div class="nav-wrapper">
-    <a routerLink="/" class="brand-logo">NHMS</a>
-    <a routerLink="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a routerLink="/">Ingresa</a></li>
-      <li>
-        <a routerLink="/">
-          <i class="material-icons">shopping_cart</i>
-        </a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<ul class="sidenav" id="mobile-demo">
-  <li>
-    <div class="user-view">
-      <div class="background">
-        <img src="https://materializecss.com/images/office.jpg">
-      </div>
-      <a href="#user"><img class="circle" src="https://materializecss.com/images/yuna.jpg"></a>
-      <a href="#name">
-        <span class="white-text name">New Home Multiservicios</span>
+<mat-toolbar>
+  <span><a routerLink="/" class="mat-h1">NHMS</a></span>
+  <span class="spacer"></span>
+  <ul>
+    <li *ngIf="!userIsAuthenticated">
+      <a routerLink="#!" routerLinkActive="mat-accent">
+        <button mat-button [matMenuTriggerFor]="menu">Bienvenido</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Iniciar sesión</button>
+        </mat-menu>
       </a>
-      <a href="#email"><span class="white-text email">nhms@gmail.com</span></a>
-    </div>
-  </li>
-  <li><a routerLink="/"><i class="material-icons">person</i>Ingresa</a></li>
-  <li>
-    <div class="divider"></div>
-  </li>
-  <li>
-    <a class="sidenav-close" routerLink="/">
-      <i class="material-icons">shopping_cart</i>
-      <span class="badge">4</span>
-    </a>
-  </li>
-</ul>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="#!" routerLinkActive="mat-accent">
+        <mat-icon matBadge="{{ cart.length }}" matBadgeColor="warn">shopping_cart</mat-icon>
+      </a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button>
+        <mat-icon>person</mat-icon>
+        {{ user }}
+      </a>
+    </li>
+  </ul>
+</mat-toolbar>

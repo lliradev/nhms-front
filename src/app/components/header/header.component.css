@@ -1,8 +1,22 @@
-.nav-wrapper {
-  padding-left: 1em;
-  padding-right: 1em;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
+  text-decoration: none;
   color: black;
+}
+
+ul {
+  display: flex;
+}
+
+.spacer {
+  flex: 2 1 auto;
+}
+
+mat-toolbar {
+  background-color: yellow;
 }

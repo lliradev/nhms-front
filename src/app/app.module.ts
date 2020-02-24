@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { MultiservicesListComponent } from './components/multiservices-list/multiservices-list.component';
 import { CartComponent } from './components/cart/cart.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,17 @@
-.page-footer {
-  background: #232F3E;
+.footer-page {
+  background-color: #232F3E;
+  min-height: 100px;
+  color: white;
+  margin: 1rem;
+  padding: 1rem;
+  /* IMPORTANTE */
+  text-align: center;
 }
 
 .footer-copyright {
-  background: #131A22;
+  background-color: #131A22;
+  min-height: 50px;
+  color: white;
+  /*IMPORTANTE */
+  text-align: center;
 }
